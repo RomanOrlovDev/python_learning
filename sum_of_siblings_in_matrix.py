@@ -1,9 +1,19 @@
-matrix = [
-    [9, 5, 3],
-    [0, 7, -1],
-    [-5, 2, 9],
-    'end'
-]
+matrix = []
+
+while True:
+    entered_value = input()
+    if entered_value == 'end':
+        break
+
+    matrix.append([int(x) for x in entered_value.split()])
+matrix.append('end')
+
+# matrix = [
+#     [9, 5, 3],
+#     [0, 7, -1],
+#     [-5, 2, 9],
+#     'end'
+# ]
 
 # output = [
 #     [3, 21, 22],
@@ -35,4 +45,8 @@ for key_top_level, i in enumerate(matrix):
 
     output.append(buf)
 
-print(output)
+
+for i in output:
+    for j in i:
+        print(j, end=" ")
+    print("")
