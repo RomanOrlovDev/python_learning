@@ -18,7 +18,6 @@ for key_top_level, i in enumerate(matrix):
         break
     buf = []
     for key_inner_level, j in enumerate(i):
-        # print(key_top_level, key_inner_level)
         left_sibling = i[-1] \
             if key_inner_level == 0 \
             else i[key_inner_level - 1]
