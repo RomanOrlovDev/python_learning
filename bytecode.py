@@ -5,8 +5,3 @@
 # dis.dis(some_function_name)
 # import opcode
 # print(opcode.opman)
-
-print(1, end=" ")
-print("")
-print("")
-print(2)
