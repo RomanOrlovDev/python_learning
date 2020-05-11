@@ -1,4 +1,6 @@
 import random
+# also called tuple
+# is immutable
 
 random_set = set()
 while True:
@@ -11,3 +13,9 @@ while True:
 print(len(random_set) + 1)
 print(random_set)
 print(random_value)
+
+
+some_set = (2, 3, 5)
+print(some_set[1])
+some_set[1] = 23
+print(some_set)
