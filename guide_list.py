@@ -1,4 +1,8 @@
 some_list = [12, 33, 'a', 39]   # some list defined
+another_list = list()  # another way to create a list
+# useful methods: min, max, sum, join
+# sorted = sorting and creating a new list
+# .sort = change list in place
 
 print(3 in some_list)
 
