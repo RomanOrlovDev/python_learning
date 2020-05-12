@@ -9,34 +9,40 @@ while True:
     x = column
     # row filling
     while True:
+        # fill the matrix cell only if it is not filled yet
         if not matrix[row][x]:
             matrix[row][x] = numbers
             numbers += 1
-        if reverse:
+
+        if reverse:  # go from right to left
             if x == column - square_length + 1:
                 break
             x -= 1
-        else:
+        else:  # go from left to right
             if x == column + square_length - 1:
                 break
             x += 1
-    column = x
+    column = x  # store last applied column value
+
     x = row
     # column filling
     while True:
+        # fill the matrix cell only if it is not filled yet
         if not matrix[x][column]:
             matrix[x][column] = numbers
             numbers += 1
-        if reverse:
+
+        if reverse:  # go down up
             if x == row - square_length + 1:
                 break
             x -= 1
-        else:
+        else:  # go top down
             if x == row + square_length - 1:
                 break
             x += 1
-    row = x
-    if reverse:
+    row = x  # store last applied row value
+
+    if reverse:  # we have completed the whole contour, it's time to go to inner square
         square_length -= 2
         row += 1
         column += 1
@@ -44,7 +50,7 @@ while True:
     if square_length < 1:
         break
 
-    reverse = not reverse
+    reverse = not reverse  # each time when we gone 2 sides of square need to change direction of iteration
 
 for rows in matrix:
     for columns in rows:
