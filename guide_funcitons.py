@@ -11,7 +11,8 @@
 # print(type(args)) <--- <class 'tuple'>
 # for argument in args:
 # print(argument)
-
+# some_func(*some_arguments) some_arguments has to be a list
+# some_func(**some_arguments) some_arguments has to be a dict
 
 def some_function(greeting, name="Anatoly"):
     """this is very first function here"""
@@ -22,17 +23,19 @@ print(some_function(name="Kitty", greeting="Hello"))
 print(some_function("Hi"))
 
 
-def some_another_function(*args):
+def some_another_function_(*args):
+    print("this is some_another_function_")
     for a in args:
         print(a)
 
 
 def some_another_function2(*args):
+    print("this is some_another_function2")
     for a in args:
         print(a)
 
 
-some_another_function(1, 5, 6)
+some_another_function_(1, 5, 6)
 
 
 simple_list = ['asdf', 'qwer']
@@ -40,6 +43,7 @@ some_another_function2(*simple_list)  # <--- asterisk is important
 
 
 def some_another_function3(**this_will_be_dict):  # <--- this will become dictionary
+    print("this is some_another_function3: ")
     print(type(this_will_be_dict))
     for key, val in this_will_be_dict.items():
         print('{}: {}'.format(key, val))
@@ -49,6 +53,7 @@ some_another_function3(a=12, test="asdf", x=88)
 
 
 def some_another_function4(**dictionary_arg):
+    print("this is some_another_function4")
     print(dictionary_arg)
 
 
