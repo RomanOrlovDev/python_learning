@@ -17,3 +17,12 @@ print(blink)
 print(hash(tuple()))
 print(hash((2, 5)))
 
+
+a = ('2',)
+b = 'b'
+l = list(a)
+l.append(b)
+tuple(l)
+print(l)
+
+tup3 = "a", "b", "c", "d"
