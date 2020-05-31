@@ -19,3 +19,6 @@ class Account:
 
 t = Account()
 t.amount = 300
+
+with open("some_file.txt", "r") as r:
+    print(r.read())

@@ -9,17 +9,17 @@ class Property:
         if instance is None:
             return self
 
-        return self.getter(instance)
+        return self.getter(instance, 13)
 
 
 class Account:
 
     @Property
-    def add_tax(self):
-        return 'tax added'
+    def add_tax(self, tax):
+        return 'tax added: {}'.format(tax)
 
-    def add_simple_tax(self):
-        return 'simple tax added'
+    def add_simple_tax(self, tax):
+        return 'simple tax added: {}'.format(tax)
 
     add_simple_tax = Property(add_simple_tax) # this is the same as @Property marking
 
