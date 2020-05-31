@@ -11,3 +11,7 @@ print(*matrix)
 # zip takes elements from each list
 for b in zip(*matrix):
     print(*b)
+
+# another solution that is difficult to grasp, in particular "list" at second line
+# n, _ = list(map(int, input().split()))
+# list(map(print, *(input().split() for _ in range(n))))
