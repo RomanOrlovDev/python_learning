@@ -1,5 +1,9 @@
 # this is unordered array of unique values
+# An element is either in a set or it isn't. This means that no element in a set has an index.
 import random
+
+my_set = {1, 5, 6}
+print(5 in my_set)
 
 random_set = set()
 another_set = {}

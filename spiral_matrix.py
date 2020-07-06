@@ -56,3 +56,19 @@ for rows in matrix:
     for columns in rows:
         print(columns, end="\t")
     print()
+
+
+# n = int(input())
+# l = [[n * n] * n for _ in range(n)]
+# t = list(range(n * n, 0, -1))
+# for lo, hi in enumerate(range(n - 1, n // 2 - 1, -1)):
+#     for x in range(lo, hi):
+#         l[lo][x] = t.pop()
+#     for y in range(lo, hi):
+#         l[y][hi] = t.pop()
+#     for x in range(hi, lo, -1):
+#         l[hi][x] = t.pop()
+#     for y in range(hi, lo, -1):
+#         l[y][lo] = t.pop()
+# for row in l:
+#     print(' '.join(map(str, row)))
