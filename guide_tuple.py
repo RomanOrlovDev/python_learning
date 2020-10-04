@@ -25,4 +25,5 @@ l.append(b)
 tuple(l)
 print(l)
 
-tup3 = "a", "b", "c", "d"
+tulp3 = "a", "b", "c", "d"
+print(tulp3[1])
